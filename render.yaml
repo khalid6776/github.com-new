@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: poker-bluff-holdem
+    runtime: node
+    plan: free
+    buildCommand: npm install --omit=dev
+    startCommand: node server.js
+    healthCheckPath: /healthz
+    autoDeploy: true
